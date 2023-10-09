@@ -62,6 +62,9 @@ const ScheduleForm = () => {
         alert(
           `Consulta marcada com sucesso com o doutor ${showConsultMarket.dentista.nome}`
         );
+        redirectsToHome();
+      } else if (getResponseFromConsult.status === 400) {
+        alert("Atenção ! A data da consulta tem que ser depois da data Atual");
       }
     } catch (error) {
       console.log(error);
@@ -145,7 +148,7 @@ const ScheduleForm = () => {
                 styles.button
               }`}
               type="submit"
-              onClick={redirectsToHome}
+              // onClick={redirectsToHome}
             >
               Schedule
             </button>
