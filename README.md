@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# ctd-fe3-template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Exame Final de Frontend III
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+- [Requisitos](#requisitos)
+  - [Condições mínimas de aprovação](#condições-mínimas-de-aprovação)
+  - [Aspectos que modificam o valor da nota final](#aspectos-que-modificam-o-valor-da-nota-final)
+- [Funcionalidades](#funcionalidades)
+- [Desenvolvimento](#desenvolvimento)
+- [API](#api)
+- [Entrega](#entrega)
+  - [Formato de Entrega](#formato-de-entrega)
 
-### `npm start`
+## Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+É essencial clonar este projeto em um repositório para poder trabalhar. Não serão aceitos projetos que tenham sido realizados sem partir deste modelo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+# Clone o repositório para o seu computador
+git clone https://github.com/DigitalHouseBrasil/CTD-FE3-Checkpoint2-Template
 
-### `npm test`
+# Entre na pasta do projeto
+cd CTD-FE3-Checkpoint2-Template
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Elimine os links do repositório de DH
+git remote rm origin
 
-### `npm run build`
+# Adicione seu projeto a sua conta do github, ajuste o link para seu nome de usuário e repositório
+git remote add origin https://github.com/<nomedousuario>/<nomedoprojeto>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Envie o repositório para o github
+git push -u origin main
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Condições mínimas de aprovação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As seguintes condições são requisitos mínimos necessários para a aprovação final:
 
-### `npm run eject`
+- **Cumprir todas as funcionalidades obrigatórias**
+- As bibliotecas necessárias para fazer o desenvolvimento já está no package.json
+- O projeto deve ser desenvolvido utilizando Javascript com React.JS.
+- O projeto deve contar com ao menos 5 testes unitários escritos para a aplicação. Para isso, deve ser feito com Jest e React Testing Library. Será considerado a importância desses testes como em um projeto real.
+- Se espera que a página de login, contenha os fluxos de validação necessários (mínimo 2 validações), para um submit correto do formulário.
+- Nos casos em que é requirido fazer uma estilização, deverá realizar tendo em vista o tema do contexto global.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Aspectos que modificam o valor da nota final
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Os seguintes aspetos são extra ao requisito de aprovação mínima que serão tidos em conta para a majoração da nota final, desde que a sua correta implementação:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Validações**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Será valorizada a adição de validações de fluxos alternativos ao normal (mais de duas validações) e o correto tratamento de erros em diferentes situações.
 
-## Learn More
+**Testing unitário**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Será avaliado o uso correto dos testes unitários e o aumento do número de testes adicionados (mais de 5 casos de teste).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Estilos**
 
-### Code Splitting
+- O estilo de outras seções do App será valorizado (fora do estilo obrigatório das rotas baseadas no tema)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Boas Práticas**
 
-### Analyzing the Bundle Size
+- Atenção especial será dada ao uso de boas práticas, melhorias de desempenho (implementando useMemo) e reutilização de código
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Funcionalidades
 
-### Making a Progressive Web App
+Ver [Funcionalidades](docs/funcionalidades.md).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Desenvolvimento
 
-### Advanced Configuration
+Ver [Desenvolvimento](docs/desenvolvimento.md).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## API
 
-### Deployment
+A API que será utilizada será:
+`https://dhodonto.ctdprojetos.com.br/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Rota com a documentação (Swagger) da API para
+`https://dhodonto.ctdprojetos.com.br/swagger-ui/index.html`
 
-### `npm run build` fails to minify
+Rota para buscar os dentistas:
+`https://dhodonto.ctdprojetos.com.br/dentista`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Rota para buscar os pacientes:
+`https://dhodonto.ctdprojetos.com.br/paciente`
+
+Rota para o login
+`https://dhodonto.ctdprojetos.com.br/auth`
+
+Para logar na aplicação, utilize:
+
+- Login: dentistaAdmin
+- Senha: admin123
+
+## Entrega
+
+### Formato de Entrega
+
+O envio será aceito enviando o URL do seu repositório clonado e um link do seu projeto na Vercel/Netlify, etc
+
+O link do Google Form para submissão será enviado pelo professor responsável pela comissão.
+
+Boa sorte e sucesso!
